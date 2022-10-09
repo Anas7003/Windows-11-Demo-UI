@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Windows 11</title>
+    <link rel="stylesheet" href="/css/taskbar.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="updateClock(); setInterval('updateClock()', 1000)">
+
+    <!-- screen overlay -->
+    <!-- <div id="overLay" class="overLay"></div> -->
+
+    <!-- Main Desktop Icons -- Start -->
+    <div id="wallpaper" class="iconsList">
+        
+        <div class="icons" id="edge">
+            <img src="/icons/edgeicon.png" width="35px" alt="">
+            <p>Edge</p>
+        </div>
+        
+        <div class="icons" id="recyclebin">
+            <img src="/icons/recyclebinicon.png" width="35px" alt="">
+            <p>Recycle Bin</p>
+        </div>
+
+        <div class="icons" id="chrome">
+            <img src="/icons/chrome.png" width="35px" alt="">
+            <p>Chrome</p>
+        </div>
+    </div>
+    <!-- Main Desktop Icons -- End -->
+
+    <!-- Taskbar -- Start -->
+    <div class="taskbar">
+        <div class="middle">
+            <div id="start" class="items"><img src="/icons/favicon.png" width="26px" alt=""></div>
+            <div id="search" class="items"><img src="/icons/search.svg" width="26px" alt=""></div>
+            <div id="edgeicon" class="items"><img src="/icons/edgeicon.png" width="26px" alt=""></div>
+            <div id="chrome" class="items"><img src="/icons/chrome.png" width="26px" alt=""></div>
+            <div id="fileExplorer" class="items"><img src="/icons/fileExplorer.png" width="26px" alt=""></div>
+            <div id="store" class="items"><img src="/icons/Microsoft_Store_2020_dark.svg" width="26px" alt=""></div>
+            <div id="vscode" class="items"><img src="/icons/vscode.png" width="26px" alt=""></div>
+        </div>
+        <div class="right">
+            <div id="icons" class="icons">
+                <!-- <div class="itmes"><img src="/icons/uparrow.png" width="25px" alt=""></div> -->
+                <div class="items"><img src="/icons/batteryFull.svg" width="25px" alt=""></div>
+                <div class="items" id="wifibtn"><img src="/icons/wifi.svg" width="25px" alt=""></div>
+                <div class="items" id="speaker"><img src="/icons/speaker.svg" width="25px" alt=""></div>
+            </div>
+
+            <div class="clockContainer">
+                <div id="clock" class="clock"></div>
+                <div id="date"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Taskbar -- End -->
+
+    <!-- StartMenu -- Start-->
+    <div class="startmenu">
+        <div class="upper">
+            <div class="head">
+                <div class="upperHead">
+                    <input type="text" placeholder="Search app here">
+                </div>
+                <div class="lowerHead">
+                    <h2>Pinned</h2>
+                    <select><option>All Apps</option></select>
+                </div>
+            </div>
+            <div class="appslist">
+                <div id="edge" class="apps">
+                    <img src="/icons/edgeicon.png" width="40px"alt="">
+                    <p>Edge</p>
+                </div>
+                <div id="thispc" class="apps">
+                    <img src="/icons/Computer.png" width="40px"alt="">
+                    <p>This PC</p>
+                </div>
+                <div id="calender" class="apps">
+                    <img src="/icons/calender.png" width="40px" alt="">
+                    <p>Calender</p>
+                </div>
+                <div id="microsoftstore" class="apps">
+                    <img src="/icons/Microsoft_Store_2020_dark.svg" width="40px" alt="">
+                    <p>Microsoft<br>Store</p>
+                </div>
+                <div id="photos" class="apps">
+                    <img src="/icons/photos.svg" width="40px" alt="">
+                    <p>Photos</p>
+                </div>
+                <div id="setting" class="apps">
+                    <img src="/icons/settings.svg" width="40px" alt="">
+                    <p>Setting</p>
+                </div>
+            </div>
+
+            <div class="appslist">
+                <div id="office" class="apps">
+                    <img src="/icons/office.svg" width="40px" alt="">
+                    <p>Office</p>
+                </div>
+                <div id="xbox" class="apps">
+                    <img src="/icons/xbox.png" width="40px" alt="">
+                    <p>Xbox</p>
+                </div>
+                <div id="solitaire" class="apps">
+                    <img src="/icons/solitaire.png" width="40px" alt="">
+                    <p>Solitaire</p>
+                </div>
+                <div id="spotify" class="apps">
+                    <img src="/icons/spotify.png" width="40px" alt="">
+                    <p>Spotify</p>
+                </div>
+                <div id="netflix" class="apps">
+                    <img src="/icons/netflix.png" width="40px" alt="">
+                    <p>Netflix</p>
+                </div>
+                <div id="todo" class="apps">
+                    <img src="/icons/todo.png" width="40px" alt="">
+                    <p>To Do</p>
+                </div>
+            </div>
+
+            <div class="appslist">
+                <div id="news" class="apps">
+                    <img src="/icons/news.png" width="45px" height="45px" alt="">
+                    <p>News</p>
+                </div>
+                <div id="vscode" class="apps">
+                    <img src="/icons/vscode.png" width="45px" height="45px" alt="">
+                    <p>VS Code</p>
+                </div>
+                <div id="twitter" class="apps">
+                    <img src="/icons/twitter.png" width="45px" height="45px" alt="">
+                    <p>Twitter</p>
+                </div>
+                <div id="messenger" class="apps">
+                    <img src="/icons/messenger.png" width="45px" height="45px" alt="">
+                    <p>Messenger</p>
+                </div>
+                <div id="photoshopexpress" class="apps">
+                    <img src="/icons/photoshopexpress.png" width="45px" height="45px" alt="">
+                    <p>Photoshop<br>Express</p>
+                </div>
+                <div id="calculator" class="apps">
+                    <img src="/icons/calculator.png" width="45px" height="45px" alt="">
+                    <p>Calculator</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="middle">
+            <h2>Recommended</h2>
+            <div class="appslist2">
+                <div id="nodejs" class="apps2 ml">
+                    <img src="/icons/nodejs.png" width="45px" height="45px" alt="">
+                    <p>Node.js<br><span>Recently Added</span></p>
+                </div>
+                <div id="onedrive" class="apps2 mr">
+                    <img src="/icons/onedrive.png" width="45px" height="45px" alt="">
+                    <p>One Drive<br><span>Recently Added</span></p>
+                </div>
+            </div>
+            <div class="appslist2">
+                <div id="7zip" class="apps2 ml">
+                    <img src="/icons/7zip.png" width="45px" height="45px" alt="">
+                    <p>7Zip<br><span>Recently Added</span></p>
+                </div>
+                <div id="msword" class="apps2 mr">
+                    <img src="/icons/msword.png" width="40px" height="40px" alt="">
+                    <p>MS Word<br><span>Recently Added</span></p>
+                </div>
+            </div>
+        </div>
+
+        <dic class="lower">
+            <div class="left">
+                <img src="/icons/user.svg" width="30px" alt="">
+                <span>Account</span>
+            </div>
+
+            <div class="right">
+                <img class="shutdown" src="/icons/shutdown.png" width=" 30px" alt="">
+            </div>
+        </div>
+
+    </div>
+     <!-- StartMenu -- End-->
+
+    <!-- Volume/wifi/battery panel Starts -->
+    <div id="multiPanel" class="multiPanel">
+        <div class="toggles">
+            <div id="wifi" class="toggleBtn">
+                <i class="iBtn fa-sharp fa-solid fa-wifi"></i>
+                <span>Wifi</span>
+            </div>
+            <div id="bluetooth" class="toggleBtn">
+                <i class="iBtn fa-brands fa-bluetooth-b"></i>
+                <span>Bluetooth</span>
+            </div>
+            <div id="airplane" class="toggleBtn">
+                <i class="iBtn fa-solid fa-plane"></i>
+                <span>Airplane Mode</span>
+            </div>
+            <div id="dark-theme" class="toggleBtn">
+                <i class="iBtn fa-solid fa-circle-half-stroke"></i>
+                <span>Dark Theme</span>
+            </div>
+            <div id="focus-assist" class="toggleBtn">
+                <i class="iBtn fa-regular fa-moon"></i>
+                <span>Focus Assist</span>
+            </div>
+            <div id="location" class="toggleBtn">
+                <i class="iBtn fa-solid fa-location-crosshairs"></i>
+                <span>Location</span>
+            </div>
+            <div id="night-light" class="toggleBtn">
+                <i class="iBtn fa-regular fa-sun"></i>
+                <span>Night Light</span>
+            </div>
+            <div id="Connect" class="toggleBtn">
+                <i class="iBtn fa-brands fa-chromecast"></i>
+                <span>Connect</span>
+            </div>
+            <div id="Transparency" class="toggleBtn">
+                <i class="iBtn fa-regular fa-square"></i>
+                <span>Transparency</span>
+            </div>
+        </div>
+
+        <div class="sliders">
+            <div class="brightnessBox centerSlider ">
+                <i class="fa-solid fa-sun m-right"></i>
+                <input type="range" name="brightness" id="brightness" min="0" value="0" max="100">
+            </div>
+            <div class="volumeBox centerSlider ">
+                <i class="fa-solid fa-volume-high m-right"></i>
+                <input type="range" name="volume" id="volume" min="0" value="0" max="100">
+            </div>
+        </div>
+
+        <div class="bottomBar">
+            <div class="battery">
+                <img class="batteryico" src="/icons/batteryFull.svg" width="40px" alt="">
+                <span>100%</span>
+            </div>
+            <div class="setting">
+                <!-- <img src="/icons/edit.svg"> -->
+                <i class="fa-solid fa-gear"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Volume/wifi/battery panel Ends -->
+   
+
+    <!-- This PC Window -->
+    <!-- <div id="thisPcWindow" class="thisPcWindow">
+
+        <div class="topbar">
+            <span><img src="/icons/Computer.png" width="20px">This PC</span>
+            <div class="topBarRight">
+                <span class="topbarBtn" id="minimize">-</span>
+                <span class="topbarBtn" id="resize">[]</span>
+                <span class="topbarBtn" id="close">x</span>
+            </div>
+        </div>
+
+        <div class="mainFileWindow">
+            <div class="sideNav">
+                <div class="navs">
+                    <span>Desktop</span>
+                    <span>Downloads</span>
+                    <span>Documnets</span>
+                    <span>Pictures</span>
+                    <span>Videos</span>
+                    <span>Onde Drive</span>
+                    <span>This PC</span>
+                    <span>Network</span>
+                </div>
+            </div>
+
+            <div class="mainWindow">
+                <div class="localdiskC">
+                    <span><img src="/icons/c-drive.png" width="50px"></span>
+                    <div>
+                        <span>Local Disk(C:)</span>
+                        <div class="storagebar"><span class="occupiedSpace"></span></div>
+                        <span>420 GB free of 465 GB</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div> -->
+
+    <!-- Video Wallpaper -->
+    <!-- <video autoplay muted id="vid">
+        <source src="/img/video.webm" type="video/webm">
+    </video> -->
+</body>
+<script src="/js/taskbar.js"></script>
+<!-- <script src="/js/volume.js"></script> -->
+</html>

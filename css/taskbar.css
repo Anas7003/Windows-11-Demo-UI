@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    background-image: url(/img/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Screen OverLay */
+.overLay{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: transparent; */
+    background-color:rgba(0, 0, 0, 0.5);
+    /* z-index: 250; */
+}
+
+/* Taskbar Middle Portion CSS*/
+.taskbar{
+    /* height: 50px; */
+    height: 40px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    /* background-color: rgba(255, 255, 255, .3); */
+    /* backdrop-filter: blur(15px); */
+    /* -webkit-backdrop-filter: blur(15px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.taskbar .middle{
+    display: flex;
+}
+
+.taskbar .middle .items{
+    height: 34px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.taskbar .middle .items:hover{
+    cursor: default;
+    background-color: rgb(224, 219, 219);
+    border-radius: 6px;
+    transition: .4s all;
+}
+
+
+/* Taskbar Right Corner CSS */
+.right{
+    height: 36px;
+    width: 170px;
+    /* background-color: red; */
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right .icons{
+    height: 34px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 5px ;
+    /* background-color: red; */
+}
+
+.right .icons:hover{
+    cursor: default;
+    background-color: rgb(224, 219, 219);
+    border-radius: 6px;
+    transition: .4s all;
+}
+
+
+.right .clockContainer{
+    /* background-color: aqua; */
+    height: 36px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.right .clockContainer div{
+    margin: 2px 5px 2px 5px;
+}
+
+.right .clockContainer:hover{
+    background-color: rgb(224, 219, 219);
+    cursor:default;
+    border-radius: 6px;
+    transition: .4s all;
+}
+
+/* Start menu CSS */
+.startmenu{
+    height: 75%;
+    width: 34%;
+    background-color: white;
+    position: absolute;
+    left: 33.5%;
+    bottom: -930px;   /*previous value 70px animation value-906 */
+    /* bottom: 70px; */
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.5), -5px -5px 20px rgba(255, 255, 255, 0.1)  */
+    transition: all 0.3s ease-in;
+}
+
+/* upper Section CSS */
+.startmenu .upper{
+    height: 430px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: orange; */
+}
+
+.startmenu .upper .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    height: 145px;
+}
+
+.startmenu .upper .head .upperHead input{
+    height: 44px;
+    width: 30vw;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(224, 219, 219);
+    padding: 0 10px;
+    font-size: 0.85em;
+    margin-top: 25px;
+}
+
+.startmenu h2{
+    font-size: 20px;
+}
+
+.startmenu .upper .head .lowerHead{
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    margin: 30px 0;
+}
+
+.startmenu .upper .head select{
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(209, 209, 209);
+}
+
+.startmenu .upper .head select:hover{
+    cursor: default;
+    background-color: rgb(224, 219, 219);
+    transition: .4s all;
+}
+
+.startmenu .upper .appslist{
+    display: flex;
+    justify-content: center;
+    /* padding: 0 50px; */
+    /* background-color: red; */
+}
+
+.startmenu .upper .appslist .apps{
+    height: 95px;
+    width: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    /* background-color: red; */
+}
+
+.startmenu .upper .appslist .apps p{
+    font-size: 0.85em;
+    padding-top: 10px;
+    text-align: center;
+}
+.startmenu .upper .appslist .apps:hover{
+    cursor: default;
+    background-color: rgb(224, 219, 219);
+    border-radius: 8px;
+    transition: .4s all;
+
+}
+
+
+/* Middle Section CSS */
+.startmenu .middle{
+    height: 250px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.startmenu .middle h2{
+    font-size: 20px;
+    margin: 0 58px;
+}
+
+.apps2{
+    height: 50px;
+    width: 260px;
+    display: flex;
+    margin: 15px;
+    align-items: center;
+    /* background-color: green; */
+    padding:10px 15px;
+}
+
+.ml{    /* margin left class for app list 2 apps*/
+    margin-left: 30px;
+}
+.mr{    /* margin right class for app list 2 apps*/
+    margin-right: 30px;
+}
+
+.apps2:hover{
+    cursor: default;
+    background-color: rgb(224, 219, 219);
+    border-radius: 8px;
+    transition: .4s all;
+}
+
+.appslist2{
+    display: flex;
+    /* background-color: green; */
+    font-size: 0.85em;
+}
+
+.apps2 img{
+    padding: 0 15px;
+}
+.apps2 span{
+    margin-left: 0;
+    color: grey;
+}
+
+
+/* Lower Section CSS */
+.startmenu .lower{
+    height: 80px;
+    width: 100%;
+    /* background-color: green; */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    /* justify-content: center; */
+    border-top: 1px solid rgb(209, 209, 209);
+}
+
+.startmenu .lower .left{
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    border-radius: 8px;
+}
+
+.startmenu .lower .left img{
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 10px;
+    padding: 5px;
+    background-color: rgb(224, 219, 219);
+}
+
+.startmenu .lower .right{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    /* background-color: aqua; */
+}
+
+.lower div{
+    margin: 0 100px;
+}
+
+.lower div:hover{
+    background-color: rgb(224, 219, 219);
+    transition: .4s all;
+}
+
+
+/* Main Desktop Icon CSS */
+
+.iconsList .icons{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 6px;
+    /* background-color: red; */
+}
+
+.iconsList .icons p{
+    padding: 10px 0;
+    font-size: 0.85rem;
+    color: white;
+    text-shadow: 0 0 4px black, 0 0 3px black;
+}
+
+.iconsList .icons:hover{
+    cursor: default;
+    /* background-color: rgb(224, 219, 219); */
+    background-color: rgba(255, 255, 255, .175);
+    transition: .4s all;
+}
+
+/* Volume/wifi/battery Panel CSS */
+.multiPanel{
+    height: 492px;
+    width: 412px;
+    /* background-color: #f8f8f8; */
+    background-color: rgba(255, 255, 255,0.7);
+    border-radius: 8px;
+    position: absolute;
+    right: 10px;
+    /* bottom: 60px;   show position:; */
+    bottom: -492px;   /*hide position:; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: .4s ease-in;
+}
+
+.toggles{
+    height: 280px;
+    width: 90%;
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: 115px 115px 115px;
+    grid-template-rows: 65px 65px 65px;
+    column-gap: 13px;
+    row-gap: 30px;
+    margin-top: 20px;
+}
+
+.toggleBtn{
+    height: 85px;
+    width: 110px;
+    /* border-radius: 8px; */
+    /* background-color: orange; */
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.toggleBtn i{
+    height: 60px;
+    width: 110px;
+    border-radius: 8px;
+    /* position: absolute; */
+    /* top: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    color: black;
+    font-size: 20px ;
+}
+
+.toggleBtn span{
+    font-size: .85rem;
+    position: absolute;
+    bottom: 2px;
+}
+
+
+/* brightness and Volume CSS */
+.sliders{
+    height: 122px;
+    width: 412px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sliders i{
+    font-size: 23px;
+}
+
+.sliders input{
+    width: 315px;
+    padding: 15px 0;
+}
+
+.centerSlider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #61bce4; */
+    padding: 0 20px;
+}
+/* utility class to give margin between silder and its logo */
+.m-right{
+    margin-right: 15px;
+}
+
+.bottomBar{
+    width: 412px;
+    height: 70px;
+    /* background-color: #f3f3f3; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.battery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 22px;
+    font-size: .85rem;
+}
+
+.setting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+.batteryico{
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* start menu app open */
+/* This PC */
+.thisPcWindow{
+    height: 600px;
+    width: 1000px;
+    /* background-color: orange; */
+    background-color: white;
+    position: absolute;
+    top: 170px;
+    left: 445px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: '';
+}
+
+.topbar{
+    height: 30px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1px solid grey;
+}
+
+.topBarRight{
+    height: 100%;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+.topbarBtn{
+    height: 30px;
+    width: 50px;
+    /* background-color: red; */
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbarBtn:nth-child(1):hover,.topbarBtn:nth-child(2):hover{
+    background-color: rgb(224, 219, 219);
+}
+
+.topbarBtn:nth-child(3):hover {
+    background-color:red;
+}
+
+.mainFileWindow{
+    display: flex;
+}
+
+
+.sideNav{
+    height: 570px;
+    width: 230px;
+    /* background-color: aqua; */
+    border-right: 0.1px solid grey;
+    position: relative;
+}
+.sideNav .navs{
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    /* background-color: red; */
+    position: absolute;
+    top: 35px;
+    left: 30px;
+
+}
+
+.mainWindow{
+    /* background-color: red; */
+    height: 570;
+    width: 770px;
+    position: relative;
+}
+
+.localdiskC{
+    display: flex;
+    align-items: center;
+    /* background-color: green; */
+    width: 308px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    height: 60px;
+}
+
+.localdiskC img{
+    margin:0 10px;
+}
+
+.localdiskC div{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.storagebar{
+    height: 14px;
+    width: 230px;
+    background-color: #e5e5e5;
+}
+
+.occupiedSpace{
+    height: 14px;
+    width: 60px;
+    background-color: #61bce4;
+}
+
+.localdiskC:hover{
+    background-color: #a3a3a3;
+}
